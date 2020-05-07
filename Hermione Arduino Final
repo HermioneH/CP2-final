@@ -1,0 +1,101 @@
+int fsrAnalogPin = 0;
+
+int LEDpin1 = 3;
+int LEDpin2 = 4;
+int LEDpin3 = 5;
+int bluePin = 6;
+int greenPin = 7;
+int redPin = 8;
+
+int fsrReading;r
+
+int LEDbrightness;
+
+void setup(void) {
+ Serial.begin(9600);
+ pinMode(LEDpin1, OUTPUT);
+ pinMode(LEDpin2, OUTPUT);
+ pinMode(LEDpin3, OUTPUT);
+ pinMode(redPin, OUTPUT);
+ pinMode(greenPin, OUTPUT);
+ pinMode(bluePin, OUTPUT);
+}
+
+void loop(void) {
+ fsrReading = analogRead(fsrAnalogPin);
+ Serial.print("Analog reading = ");
+ Serial.println(fsrReading);
+
+   if (fsrReading >= 0 && fsrReading <= 149) // all off
+   {
+      digitalWrite(LEDpin1, LOW);
+      digitalWrite(LEDpin2, LOW);
+      digitalWrite(LEDpin3, LOW);
+      digitalWrite(redPin, LOW);
+      digitalWrite(greenPin, LOW);
+      digitalWrite(bluePin, LOW);
+   }
+
+   if (fsrReading >= 150 && fsrReading <= 299) // all off
+   {
+      digitalWrite(LEDpin1, HIGH);
+      digitalWrite(LEDpin2, LOW);
+      digitalWrite(LEDpin3, LOW);
+      digitalWrite(redPin, LOW);
+      digitalWrite(greenPin, LOW);
+      digitalWrite(bluePin, LOW);
+   }
+
+   if (fsrReading >= 300 && fsrReading <= 449) // all off
+   {
+      digitalWrite(LEDpin1, HIGH);
+      digitalWrite(LEDpin2, HIGH);
+      digitalWrite(LEDpin3, LOW);
+      digitalWrite(redPin, LOW);
+      digitalWrite(greenPin, LOW);
+      digitalWrite(bluePin, LOW);
+   }
+
+   if (fsrReading >= 450 && fsrReading <= 599) // all off
+   {
+      digitalWrite(LEDpin1, HIGH);
+      digitalWrite(LEDpin2, HIGH);
+      digitalWrite(LEDpin3, HIGH);
+      digitalWrite(redPin, LOW);
+      digitalWrite(greenPin, LOW);
+      digitalWrite(bluePin, LOW);
+   }
+
+   if (fsrReading >= 600 && fsrReading <= 749) // all off
+   {
+      digitalWrite(LEDpin1, HIGH);
+      digitalWrite(LEDpin2, HIGH);
+      digitalWrite(LEDpin3, HIGH);
+      digitalWrite(redPin, HIGH);
+      digitalWrite(greenPin, LOW);
+      digitalWrite(bluePin, LOW);
+   }
+
+   if (fsrReading >= 750 && fsrReading <= 899) // all off
+   {
+      digitalWrite(LEDpin1, HIGH);
+      digitalWrite(LEDpin2, HIGH);
+      digitalWrite(LEDpin3, HIGH);
+      digitalWrite(redPin, HIGH);
+      digitalWrite(greenPin, HIGH);
+      digitalWrite(bluePin, LOW);
+   }
+
+   if (fsrReading >= 900 && fsrReading <= 1023) // all off
+   {
+      digitalWrite(LEDpin1, HIGH);
+      digitalWrite(LEDpin2, HIGH);
+      digitalWrite(LEDpin3, HIGH);
+      digitalWrite(redPin, HIGH);
+      digitalWrite(greenPin, HIGH);
+      digitalWrite(bluePin, HIGH);
+   }
+
+
+ delay(100);
+}
