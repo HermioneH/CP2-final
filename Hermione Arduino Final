@@ -7,7 +7,7 @@ int bluePin = 6;
 int greenPin = 7;
 int redPin = 8;
 
-int fsrReading;r
+int fsrReading;
 
 int LEDbrightness;
 
@@ -36,7 +36,7 @@ void loop(void) {
       digitalWrite(bluePin, LOW);
    }
 
-   if (fsrReading >= 150 && fsrReading <= 299) // all off
+   if (fsrReading >= 150 && fsrReading <= 299)
    {
       digitalWrite(LEDpin1, HIGH);
       digitalWrite(LEDpin2, LOW);
@@ -46,7 +46,7 @@ void loop(void) {
       digitalWrite(bluePin, LOW);
    }
 
-   if (fsrReading >= 300 && fsrReading <= 449) // all off
+   if (fsrReading >= 300 && fsrReading <= 449)
    {
       digitalWrite(LEDpin1, HIGH);
       digitalWrite(LEDpin2, HIGH);
@@ -56,7 +56,7 @@ void loop(void) {
       digitalWrite(bluePin, LOW);
    }
 
-   if (fsrReading >= 450 && fsrReading <= 599) // all off
+   if (fsrReading >= 450 && fsrReading <= 599)
    {
       digitalWrite(LEDpin1, HIGH);
       digitalWrite(LEDpin2, HIGH);
@@ -66,7 +66,7 @@ void loop(void) {
       digitalWrite(bluePin, LOW);
    }
 
-   if (fsrReading >= 600 && fsrReading <= 749) // all off
+   if (fsrReading >= 600 && fsrReading <= 749) 
    {
       digitalWrite(LEDpin1, HIGH);
       digitalWrite(LEDpin2, HIGH);
@@ -76,7 +76,7 @@ void loop(void) {
       digitalWrite(bluePin, LOW);
    }
 
-   if (fsrReading >= 750 && fsrReading <= 899) // all off
+   if (fsrReading >= 750 && fsrReading <= 899)
    {
       digitalWrite(LEDpin1, HIGH);
       digitalWrite(LEDpin2, HIGH);
@@ -86,7 +86,7 @@ void loop(void) {
       digitalWrite(bluePin, LOW);
    }
 
-   if (fsrReading >= 900 && fsrReading <= 1023) // all off
+   if (fsrReading >= 900 && fsrReading <= 1023) // all on
    {
       digitalWrite(LEDpin1, HIGH);
       digitalWrite(LEDpin2, HIGH);
